@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    transition: 0.3s ease;
+}
+
+/* Light Mode Colors */
+:root {
+    --bg: #f9f9f9;
+    --text: #111;
+    --primary: #007bff;
+    --card: #fff;
+}
+
+/* Dark Mode Colors */
+.dark {
+    --bg: #121212;
+    --text: #fff;
+    --primary: #4dabf7;
+    --card: #1e1e1e;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Dark Mode Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+    padding: 10px;
+    background: var(--primary);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 200;
+}
+
+/* Navigation */
+header {
+    background: var(--card);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.download-btn {
+    background: #28a745;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    padding: 120px 10% 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 46px;
+}
+
+.hero-text span {
+    color: var(--primary);
+}
+
+.hero-img img {
+    width: 300px;
+    border-radius: 50%;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sections */
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 40px 0 20px;
+}
+
+.about,
+.skills,
+.projects,
+.contact {
+    padding: 40px 10%;
+}
+
+/* About */
+.about-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.about-box div {
+    width: 48%;
+    background: var(--card);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Skills */
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    padding: 12px 18px;
+    background: var(--primary);
+    color: white;
+    margin: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+/* Projects */
+.project-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-card {
+    width: 30%;
+    background: var(--card);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.project-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: var(--text);
+    color: var(--bg);
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    background: var(--card);
+    color: var(--text);
+}
+
+/* Footer */
+footer {
+    background: var(--card);
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--card);
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-grid {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-box {
+        flex-direction: column;
+    }
+
+    .about-box div {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

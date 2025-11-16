@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Dark Mode Toggle -->
+<div class="theme-toggle" onclick="toggleTheme()">
+    🌙
+</div>
+
+<!-- Navigation -->
+<header>
+    <nav class="navbar">
+        <h2 class="logo">MyPortfolio</h2>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero fade-in">
+    <div class="hero-text">
+        <h1>Hello, I'm <span> Amith</span></h1>
+        <p>Web Developer | Designer | Programmer</p>
+
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="resume.pdf" download class="btn download-btn">Download Resume</a>
+    </div>
+
+    <div class="hero-img">
+        <img src="your-photo.jpg" alt="profile photo">
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about fade-in">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate Web Developer specializing in modern, responsive, and user-friendly websites.
+    </p>
+
+    <div class="about-box">
+        <div>
+            <h3>Education</h3>
+            <p>BCA — Bachelor of Computer Applications</p>
+            <p>XYZ University (2023–2026)</p>
+        </div>
+
+        <div>
+            <h3>Experience</h3>
+            <p>• Frontend Development</p>
+            <p>• Web App Internships</p>
+            <p>• Freelance Projects</p>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills fade-in">
+    <h2>My Skills</h2>
+
+    <div class="skill-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Bootstrap</div>
+        <div class="skill">Python</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="projects fade-in">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Landing Page</h3>
+            <p>A clean and responsive landing page design.</p>
+            <a href="#" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Weather App</h3>
+            <p>Fetch real-time weather data from API.</p>
+            <a href="#" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Tic-Tac-Toe Game</h3>
+            <p>Interactive game with AI mode.</p>
+            <a href="#" class="project-btn">View Project</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
+
+    <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Your Name. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
