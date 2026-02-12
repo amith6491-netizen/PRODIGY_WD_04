@@ -8,7 +8,7 @@
    body {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1a0033, #2d0052);
+    background: linear-gradient(135deg, #9b59b6, #3498db);
     color: #fffeff;
     min-height: 100vh;
     display: flex;
@@ -19,16 +19,26 @@
     padding: 20px;
 }
 
+@keyframes shimmer {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(155, 89, 182, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(155, 89, 182, 1), 0 0 50px rgba(52, 152, 219, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(155, 89, 182, 0.4);
+    }
+}
+
 h1 {
     margin-top: 0;
     margin-bottom: 30px;
     font-size: 3em;
-    background: linear-gradient(135deg, #af2fba, #69c9ef);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 20px rgba(175, 47, 186, 0.5);
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(155, 89, 182, 0.8);
     letter-spacing: 2px;
+    animation: shimmer 2s infinite ease-in-out;
 }
 
 #game {
