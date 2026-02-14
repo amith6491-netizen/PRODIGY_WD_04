@@ -16,12 +16,11 @@
 }
 
 /* Dark Mode Colors */
-.span,.dark {
+.dark {
     --bg: #121212;
     --text: #fff;
     --primary: #4dabf7;
     --card: #141313;
-    color: #ffffff;
 }
 
 body {
@@ -143,8 +142,8 @@ header {
 /* Sections */
 section h2 {
     text-align: center;
-    font-size: 32px;
-    margin: 40px 0 20px;
+    font-size: 50px;
+    margin: 80px 0 20px;
 }
 
 .about,
