@@ -69,7 +69,8 @@ header {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 50px;
+    box-sizing: var(--card);
 }
 
 .nav-links a {

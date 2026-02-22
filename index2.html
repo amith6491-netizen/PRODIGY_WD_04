@@ -7,7 +7,7 @@
   <style>
     * {
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: ui-sans-serif;
     }
 
     body {
@@ -17,15 +17,30 @@
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, #4facfe, #00f2fe);
+      background-image: url(weather.jpeg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+    }
+    .card{
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      
+
     }
 
     .weather-app {
-      background: #fff;
-      padding: 25px;
-      border-radius: 12px;
-      width: 320px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      background: #05a2ea;
+      padding: 100px;
+      border-radius: 25px;
+      width: 610px;
+      box-shadow: inset 2px 4px 20px 6px rgba(0, 0, 0, 0.2);
       text-align: center;
+      height: 350px;
+      background-image: url(weather.jpeg);
     }
 
     .weather-app h2 {
@@ -94,15 +109,19 @@
   </style>
 </head>
 <body>
+  <div class="card"></div>
   <div class="weather-app">
+    
     <h2>Weather App</h2>
     <div class="search-box">
       <input type="text" id="cityInput" placeholder="Enter city name" />
       <button onclick="getWeather()">Search</button>
     </div>
+    </div>
+  
 
     <div class="error" id="error">City not found!</div>
-
+    
     <div class="weather-info" id="weatherInfo">
       <img id="weatherIcon" alt="Weather Icon" />
       <div class="temp" id="temperature"></div>
