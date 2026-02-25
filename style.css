@@ -4,14 +4,14 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     transition: 0.3s ease;
-    background-color: #3838e3 blue;
+    background-color: #ffffff ;;
 }
 
 /* Light Mode Colors */
 :root {
     --bg: #ffffff;
-    --text: #08151a;
-    --primary: #06c6e3;
+    --text: #000000;
+    --primary: rgb(220 208 208);
     --card: #ffffff;
 }
 
@@ -30,7 +30,7 @@ body {
 
 /* Dark Mode Button */
 .theme-toggle {
-    position: left;
+    position: fixed;
     top: 20px;
     right: 20px;
     font-size: 22px;
@@ -40,31 +40,34 @@ body {
     cursor: pointer;
     z-index: 200;
 }
+.menu-toggle {
+    display: none;
+}
 
 /* Navigation */
-header {
-     padding: 10px 50px;
-    background: var(--primary);
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    /*display: inline-block;*/
-    margin: 10px 15px;
-    font-size: 20px;
-    font-weight: 500;
-    cursor:pointer;
-    border-width: 2px;
-    transition: 0.3s ease;
+.header {
+    width: 85%;
+    margin: 20px auto;
+    padding: 15px 40px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: auto;
 }
 
 .nav-links {
     display: flex;
+    gap: 30px;
     list-style: none;
 }
 
@@ -95,18 +98,21 @@ header {
 /* Buttons */
 .btn {
     padding: 14px 28px;
-    background: var(--primary);
-    color: white;
+    background: rgb(220 208 208);
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
     margin: 10px 5px;
     font-size: 16px;
     font-weight: 500;
+    
 }
 
 .download-btn {
-    background: #28a745;
+    background: rgb(220 208 208);
+    font-weight:500;
+   
 }
 
 .btn:hover {
@@ -114,30 +120,20 @@ header {
 }
 
 /* Hero Section */
-.hero-subtitle {
-    font-size: 30px;
-    font-weight: 500;
-}
 .hero {
-    display: flex;
-    padding: 120px 10% 60px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.hero-text h1 {
-    font-size: 80px;
-}
-
-.hero-text span {
-    color: black;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
 }
 
 .hero-img img {
-    width: 500px;
-    border-radius: 50%;
+    width: 250px;
+    margin-top: 30px;
 }
 
+.hero-text h1 {
+    font-size: 40px;
+}
 /* Fade-in animation */
 .fade-in {
     opacity: 0;
@@ -163,7 +159,8 @@ section h2 {
 .skills,
 .projects,
 .contact {
-    padding: 60px 20%;
+    margin-left:auto;
+    padding: 40px 20%;
 }
 
 /* About */
@@ -200,26 +197,20 @@ section h2 {
 
 .skill-container {
     display: flex;
-    flex-wrap: nowrap;
-    width: 100vw;
     overflow: hidden;
+    width: 100%;
     position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
 }
-
 .skill {
     padding: 16px 28px;
     background: var(--primary);
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 15px 25px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 18px;
     font-weight: 600;
-    animation: continuousSlide 15s linear infinite;
+    animation: continuousSlide 10s linear infinite;
 }
 
 .skill:hover {
@@ -299,39 +290,46 @@ footer {
     padding: 15px;
     margin-top: 40px;
 }
+/* ===== MOBILE NAVIGATION ===== */
+@media (max-width: 768px) {
 
-/* Responsive */
-@media(max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: var(--card);
-    }
-
-    .menu-btn {
-        display: block;
+    body {
+        background-color: var(--bg);
+        overflow-x: hidden;
     }
 
     .hero {
         flex-direction: column;
         text-align: center;
+        padding: 80px 20px;
     }
 
-    .project-grid {
-        flex-direction: column;
+    .hero-img img {
+        width: 250px;
+        margin-top: 30px;
     }
 
-    .project-card {
-        width: 100%;
-        margin-bottom: 20px;
+    .hero-text h1 {
+        font-size: 40px;
     }
 
     .about-box {
-        flex-direction: column;
+    flex-direction: column;
+}
+
+.about-box div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+    .about,
+    .skills,
+    .projects,
+    .contact {
+        padding: 40px 20px;
     }
 
-    .about-box div {
+    .skill-container {
         width: 100%;
-        margin-top: 10px;
     }
 }
